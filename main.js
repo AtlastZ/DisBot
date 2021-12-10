@@ -12,11 +12,11 @@ global.client = new Client({
 });
 
 client.config = require('./config');
-
+console.log('Client ready!');
 global.player = new Player(client, client.config.opt.discordPlayer);
 
 require('./src/loader');
 require('./src/events');
-
+console.log(process.env);
 // client.login(client.config.app.token);
 client.login(process.env.token);
