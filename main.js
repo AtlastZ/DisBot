@@ -19,4 +19,4 @@ require('./src/loader');
 require('./src/events');
 console.log(process.env);
 // client.login(client.config.app.token);
-client.login(process.env.token);
+// client.login(process.env.token);
