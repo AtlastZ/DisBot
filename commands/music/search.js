@@ -23,7 +23,7 @@ module.exports = {
 
         const embed = new MessageEmbed();
 
-        embed.setColor('RED');
+        embed.setColor('PURPLE');
         embed.setAuthor(`Results for ${args.join(' ')}`, client.user.displayAvatarURL({ size: 1024, dynamic: true }));
 
         const maxTracks = res.tracks.slice(0, 10);
@@ -31,7 +31,7 @@ module.exports = {
         embed.setDescription(`${maxTracks.map((track, i) => `**${i + 1}**. ${track.title} | ${track.author}`).join('\n')}\n\nSelect choice between **1** and **${maxTracks.length}** or **cancel** ⬇️`);
 
         embed.setTimestamp();
-        embed.setFooter('Music comes first - Made with heart by Zerio ❤️ Custom by Rei`💜', message.author.avatarURL({ dynamic: true }));
+        embed.setFooter('Music comes first - Made with heart by Zerio Custom by Rei`💜', message.author.avatarURL({ dynamic: true }));
 
         message.channel.send({ embeds: [embed] });
 
